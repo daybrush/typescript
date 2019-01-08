@@ -29,6 +29,7 @@
 14. type과 interface의 오묘한 차이 (매핑 타입)
 15. typeof, keyof, 인덱스접근타입(IndexedAccessType)
 16. enum vs consts
+17. 극한 타입(함수형)
 
 
 ## Config 설정
