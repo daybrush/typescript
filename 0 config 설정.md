@@ -152,10 +152,14 @@ $ tsc -p tsconfig.declaration.json
 ## tsconfig 복붙 예제
 * decorator를 사용하는 경우(experimentalDecorators)와 esnext 타입을 무시하는 경우(skipLibCheck)
   https://github.com/daybrush/scenejs/blob/master/tsconfig.json
-* type이 없는 프로젝트를 가져오는 경우: https://github.com/naver/egjs-axes/blob/master/tsconfig.json
-* Generator와 async을 사용하는 경우: https://github.com/daybrush/fjx/blob/master/tsconfig.json  (test는 jest지만 파일은 동일)
-* test(karma-typescript)를 사용하는 경우: https://github.com/daybrush/scenejs/blob/master/tsconfig.test.json
-* test(karma-webpack)를 사용하는 경우: https://github.com/daybrush/scenejs/blob/master/tsconfig.test.json
+* type이 없는 프로젝트를 가져오는 경우(skipLibCheck)
+  https://github.com/naver/egjs-axes/blob/master/tsconfig.json
+* Generator와 async을 사용하는 경우(lib), test(jest)를 사용하는 경우
+  https://github.com/daybrush/fjx/blob/master/tsconfig.json
+* test(karma-typescript)를 사용하는 경우
+  https://github.com/daybrush/scenejs/blob/master/tsconfig.test.json
+* test(karma-webpack)를 사용하는 경우
+  https://github.com/daybrush/scenejs/blob/master/tsconfig.test.json
 * declaration 파일을 생성하는 경우: 
 
 
