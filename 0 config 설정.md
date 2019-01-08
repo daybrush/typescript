@@ -120,7 +120,8 @@ Javascript 프로젝트를 TypeScript에서 쓰는 경우 ```import * as A from 
 그래서 esModuleInterop를 활성화하면 위 같은 경우에도 ```import A from "aaa"```를 사용할 수 있습니다.
 
 ### skipLibCheck
-esModuleInterop와 같이 Javascript 프로젝트를 가져오는 경우 ```*.d.ts```가 없는 경우가 많습니다. ```@types/***```가 있으면 사용하지만 없는 경우인데 사용하고 싶으면 skipLibCheck를 활성화시키면 됩니다.
+* esModuleInterop와 같이 Javascript 프로젝트를 가져오는 경우 ```*.d.ts```가 없는 경우가 많습니다. ```@types/***```가 있으면 사용하지만 없는 경우인데 사용하고 싶으면 skipLibCheck를 활성화시키면 됩니다.
+* 사용하는 라이브러리에 있는 타입이 내가 사용하는 lib보다 높은 경우에도 컴파일이 되지 않습니다. 이 경우더 높은 lib을 추가하는 방법도 있고 skipLibCheck 옵션을 활성화하면 lib을 무시할 수 있습니다.
 
 ### declaration, declarationDir, emitDeclarationOnly, removeComments
 4개의 옵션을 동시에 쓰는 옵션입니다.(아마도)
