@@ -157,3 +157,4 @@ $ tsc -p tsconfig.declaration.json
 
 #### 참조 문서
 https://www.typescriptlang.org/docs/handbook/compiler-options.html
+https://babeljs.io/docs/en/babel-types
