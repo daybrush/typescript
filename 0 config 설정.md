@@ -1,13 +1,36 @@
 # TypeScript 스터디 0 - 소개 및 config 설정
 
+
 * 이 스터디의 설명은 중급자 기준으로 초점이 맞춰져있습니다.
 * 하지만 예제는 초급자도 알 수 있게 실사용 예시를 다양하게 넣었습니다.
+* 여기서 소개되는 타입은 InfiniteGrid를 Javascript에서 TypeScript를 전환하는 작업에서 대부분 사용한 타입들입니다. 나머지는 다른 프로젝트에서 사용했으며 여러분들이 알면 좋겠다는 타입들입니다.
 * 이 스터디에서는 실시간으로 Javascript에서 TypeScript로 전환하는 작업을 할 것입니다.
   * 여러분은 본인의 Javascript 프로젝트를 가져오시거나
   * TypeSciprt 프로젝트로 시작하시거나
   * 스터디에서 제공한 예제 파일을 사용하시면 됩니다.
+* 목차는 다음과 같이 진행하며 순서가 바뀔 수 있습니다.
+
+### 목차
+0. config 설정
+1. Keyword와 Literal타입
+2. Array과 Tuple타입
+3. type, interface, Object 타입
+4. Generic 타입과 extends(constraint)
+5. Function과 Function 타입과 Overload
+6. Method과 Method 타입과 Overload
+7. Union과  Intersection 타입
+8. Union 타입과 Generic타입의 차이
+8. 조건부 타입
+10. predicate 타입 체크
+11. Require과 Partial
+12. readonly와 optional과 제거 접두사(-)
+13. interface와 Class의 차이와 Constructor 타입
+14. type과 interface의 오묘한 차이 (매핑 타입)
+15. typeof, keyof, 인덱스접근타입(IndexedAccessType)
+16. enum vs consts
 
 
+## Config 설정
 ## 1. Install
 
 ```sh
