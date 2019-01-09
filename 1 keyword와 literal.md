@@ -9,13 +9,13 @@ consts.ts에 가장 많이 들어가는 타입이 keyword와 literal이 됩니�
 ## Keyword
 
 키워드는 타입스크립트에서 지원하는 가장 기본 타입에 해당한다.
-boolean: **```BooleanKeyword```**
-number: **```NumberKeyword```**
-string: **```StringKeyword```**
-undefined: **```UndefinedKeyword```**
-void: **```VoidKeyword```**
-never: **```NeverKeyword```**
-any: **```AnyKeyword```**
+* boolean: **```BooleanKeyword```**
+* number: **```NumberKeyword```**
+* string: **```StringKeyword```**
+* undefined: **```UndefinedKeyword```**
+* void: **```VoidKeyword```**
+* never: **```NeverKeyword```**
+* any: **```AnyKeyword```**
 
 ---
 이 중 조금 별난 타입이 있다면 never, any, void입니다.
@@ -34,9 +34,9 @@ any: **```AnyKeyword```**
 리터럴은 사전적 정의로는 고정된 값입니다. 상수에서 쓰입니다.
 타입으로 사용할 수 있는 리터럴은 3가지가 있다.
 
-true / false: **```BooleanLiteral```**
--2, -1, 0, 1, 2: **```NumericLiteral```**
-"1", "2", "3", "aabcc": **```StringLiteral```**
+* true / false: **```BooleanLiteral```**
+* -2, -1, 0, 1, 2: **```NumericLiteral```**
+* "1", "2", "3", "aabcc": **```StringLiteral```**
 
 
 상수에서 위의 3종류 값을 쓴다면 리터럴 타입으로 부여해줍니다.
@@ -61,8 +61,8 @@ a는 2번 string 리터럴 타입이고 b는 1번 string 키워드 타입입니�
 const a = "1";
 let b = "1";
 ```
-a는 상수이기 때문에 타입은 ```"1"``` 타입입니다.
-b는 변수이기 때문에 ```string```타입입니다.
+* a는 상수이기 때문에 타입은 ```"1"``` 타입입니다.
+* b는 변수이기 때문에 ```string```타입입니다.
 
 ---
 
