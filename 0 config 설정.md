@@ -104,7 +104,7 @@ ESNext를 선택한 경우 type을 제외하고 소스코드가 변하지 않습
 
 ### lib
 자신의 프로젝트에서 사용하는 타입의 지원 범위입니다.
-* **DOM**
+* **DOM**: ```Node```, ```HTMLElement```, ```Document```, ```SVG```
 * **ES6/ES2015**: ```Symbol```, ```Promise```, ```Iterable```
 * ES2015.Promise, ES2015.Generator, ...: 전체를 가져오는게 아니라 일부 타입만 가져올 수 있습니다.
 * ES2016: ```Array.prototype.include```, ...
@@ -139,6 +139,8 @@ react를 쓰시는 분을 위한 옵션입니다.
 * **react** : react쓰신다면 ```"react"```
 * Preserve: 기본값
 
+
+---
 
 ### noImplicitAny
 이 옵션을 활성화하면 any를 쓸 수 있게 하는게 아니라 type이 불분명해서 any를 발생시키는 요인이 있더라도 에러를 일으키지 않겠다는 뜻입니다.
