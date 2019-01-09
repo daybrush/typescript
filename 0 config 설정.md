@@ -150,17 +150,48 @@ react를 쓰시는 분을 위한 옵션입니다.
 ---
 
 ### esModuleInterop
-Javascript 프로젝트를 TypeScript에서 쓰는 경우 ```import * as A from "aaa";``` 이렇게 쓰는 경우가 있습니다.
 
-해당 라이브러리가 commonjs를 이용해 ```module.exports```를 사용했기 때문입니다.
+```js
+export default A;
+```
 
-그래서 esModuleInterop를 활성화하면 위 같은 경우에도 ```import A from "aaa"```를 사용할 수 있습니다.
+위의 코드처럼 default로 내보낸 모듈을 가져올 때 보통 다음과 같이 가져옵니다.
+```js
+import A from "aaa";
+```
+
+하지만 ```"aaa"```가 commonjs를 사용했다면 TypeScript에서는 다음과 같이 가져와야만 하는 경우가 있습니다.
+```js
+import * as A from "aaa";
+```
+---
+이 경우는 해당 라이브러리가 ```export default``` 대신 commonjs를 이용해 ```module.exports```를 사용했기 때문입니다.
+
+TypeScript에서 ```import A from "aaa"```를 사용하면 다음과 같이 변환이 됩니다.
+```js
+var A = require("aaa").default; // undefined
+```
+하지만 ```import * as A from "aaa"```를 사용하면 다음과 같이 변환이 됩니다.
+```js
+var A = require("aaa"); // A
+```
+
+---
+
+module.exports를 사용하는 이유는 ```require("aaa")``` 형태로 사용할 수 있기 때문입니다.
+
+하지만 ```export default A```를 변환하면 ```exports.default = A```로 변환이 되기 때문에 ```require("aaa").default```로 사용해야 합니다.
+
+그래서 ```export default A```를 하지 않더라도 해결하려면 ```esModuleInterop``` 옵션을 사용하시면 됩니다.
+
+이 옵션을 활성화하면 위 같은 경우에도 ```import A from "aaa"```형태로 사용할 수 있습니다.
+
 
 ---
 
 ### skipLibCheck
 * esModuleInterop와 같이 Javascript 프로젝트를 가져오는 경우 ```*.d.ts```가 없는 경우가 많습니다. ```@types/***```가 있으면 사용하지만 없는 경우인데 사용하고 싶으면 skipLibCheck를 활성화시키면 됩니다.
-* 사용하는 라이브러리에 있는 타입이 내가 사용하는 lib보다 높은 경우에도 컴파일이 되지 않습니다. 이 경우더 높은 lib을 추가하는 방법도 있고 skipLibCheck 옵션을 활성화하면 lib을 무시할 수 있습니다.
+* 만약 내가 ES2015를 사용하고 있는데 사용하는 라이브러리에서 ESNext 타입을 쓰는 경우라면 ESNext가 지원 대상에 포함되지 않았기 때문에 컴파일이 되지 않습니다. 이 경우 lib의 지원 대상을 추가하는 방법도 있고 **skipLibCheck** 옵션을 활성화하면 lib을 무시할 수 있습니다.
 
 ---
 
@@ -192,7 +223,7 @@ $ tsc -p tsconfig.declaration.json
 ```
 
 ---
-tsoncig 파일을 따로 만드는 이유는 removeComments옵션과 관계가 있습니다.
+tsoncig 파일을 따로 만드는 이유 중 하나는 removeComments옵션과 관계가 있습니다.
 소스코드를 만들 때 커멘트를 삭제를 안하는 development 버전이 있기 때문입니다. product버전은 커멘트를 삭제하지만 그건 uglify-js가 해줍니다.
 
 ---
