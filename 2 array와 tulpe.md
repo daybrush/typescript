@@ -10,7 +10,7 @@
 타입의 차이가 있다면
 * ```number[]``` 는 array문법을 사용(```ArrayType```)한 것이고
 * ```Array<number>``` 는 ```Array<T>```타입을 사용(```TypeReference```)한 것입니다. 
- Array라는 Interface가 존재하며 T는 Generic 타입입니다.
+  Array라는 Interface가 존재하며 T는 Generic 타입입니다.
 
 
 또한 tslint에서는
