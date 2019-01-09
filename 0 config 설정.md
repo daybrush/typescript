@@ -224,7 +224,11 @@ $ tsc -p tsconfig.declaration.json
 
 ---
 tsoncig 파일을 따로 만드는 이유 중 하나는 removeComments옵션과 관계가 있습니다.
-소스코드를 만들 때 커멘트를 삭제를 안하는 development 버전이 있기 때문입니다. product버전은 커멘트를 삭제하지만 그건 uglify-js가 해줍니다.
+
+
+소스코드를 만들 때 커멘트를 삭제를 안하는 development 버전이 있기 때문입니다. 
+
+product버전은 커멘트를 삭제하지만 그건 uglify-js가 해줍니다.
 
 ---
 
